@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side-by-Side Containers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .parent-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px; /* Space between the containers */
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex: 1; /* Equal width for both containers */
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .container img {
+      width: 40%;
+      height: auto;
+      display: block;
+    }
+
+    .text {
+      padding: 20px;
+      width: 60%;
+    }
+
+    .text h2 {
+      margin: 0 0 10px;
+      font-size: 1.5em;
+    }
+
+    .text p {
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .parent-container {
+        flex-direction: column; /* Stack containers vertically on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent-container">
+    <div class="container">
+      <img src="https://via.placeholder.com/150" alt="Image 1">
+      <div class="text">
+        <h2>Container 1</h2>
+        <p>This is the text for the first container. The image is displayed on the left side, and the text is on the right side.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="https://via.placeholder.com/150" alt="Image 2">
+      <div class="text">
+        <h2>Container 2</h2>
+        <p>This is the text for the second container. The layout is the same as the first, with an image on the left and text on the right.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
