@@ -75,8 +75,65 @@
 .weatherData p {
   margin: 0px;
 }
-@media (max-width:375px) {
-.weather{
-    padding: 250px;
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  .weather {
+    padding: 30px;
+  }
+
+  .temp {
+    font-size: 60px;
+  }
+
+  .loc {
+    font-size: 35px;
+  }
+
+  .weatherData .col {
+    width: 100%; /* Take full width for mobile */
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .temp {
+    font-size: 50px;
+  }
+
+  .loc {
+    font-size: 30px;
+  }
+
+  .icon1 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .weather {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .searchBar {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .searchBar input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .searchBar button {
+    padding: 8px;
+  }
+
+  .weatherData {
+    flex-direction: column; /* Stack columns vertically on small screens */
+  }
+
+  .weatherData .col {
+    margin-top: 15px;
+    width: 100%; /* Full width for each column */
   }
 }
