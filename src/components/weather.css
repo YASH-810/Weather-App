@@ -55,6 +55,7 @@
 .loc{
   color: white;
   font-size: 50px;
+  margin: 0px;
 }
 .weatherData{
   display: flex;
