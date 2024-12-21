@@ -74,7 +74,7 @@ const Weather = () => {
         </button>
       </div>
       <div className="weatherCard">
-        <img src={weatherData.icon} alt="" />
+        <img src={weatherData.icon ? weatherData.icon : clear} alt="" />
         <p className="temp">{weatherData.temp}°C</p>
         <p className="loc">{weatherData.location}</p>
         <p>{CurrentDate}</p>
